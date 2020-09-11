@@ -4,8 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
         //Thread
-        MyThread testTread = new MyThread();
-        testTread.start();
+        MyThread testThread = new MyThread();
+        testThread.start();
+
+        //Runnable
+        MyRunnable testMyRunnable = new MyRunnable();
+        Thread nextTestThread = new Thread(testMyRunnable);
+        nextTestThread.start();
+        
     }
 
 }
